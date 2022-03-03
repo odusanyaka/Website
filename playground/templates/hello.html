@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "TIME";
+}
+function revert() {
+    var today = new Date();
+    //window.alert(today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds())
+    document.getElementById("demo").innerHTML = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+}
+function killit() {
+    window.alert("20")
+    document.getElementById("image").innerHTML = "dead"
+}
+</script>
+</head>
+
+<body>
+<center>
+
+    <h1> KEHINDEODUSANYA </h1>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+<button type="button" onclick="revert()">Try it</button>
+
+    <br>
+
+    {% load static %}
+
+    <img id="image" src="{% static '/smiley.gif' %}" alt="My image">
+
+
+    <button type="button" onclick="killit()"> kill it </button>
+
+<br>
+<a href = '..'>HOMEPAGE</a>
+</center>
+</body>
+
+
+
+
+</html>
+
+
